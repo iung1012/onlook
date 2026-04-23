@@ -1,0 +1,373 @@
+﻿{
+    "projects": {
+        "create": {
+            "settings": {
+                "title": "Configura├º├Áes",
+                "tooltip": "Configurar as defini├º├Áes do novo projeto"
+            },
+            "success": "Projeto criado com sucesso.",
+            "steps": {
+                "count": "{current} de {total}",
+                "error": "Dados do projeto ausentes."
+            },
+            "methods": {
+                "new": "Criar Novo Projeto",
+                "load": "Carregar Projeto Existente"
+            },
+            "loading": {
+                "title": "Configurando seu novo app Onlook...",
+                "description": "Isso pode levar alguns segundos",
+                "cancel": "Cancelar"
+            },
+            "error": {
+                "title": "Erro ao criar seu app Onlook",
+                "backToPrompt": "Voltar ao Prompt"
+            }
+        },
+        "select": {
+            "empty": "Nenhum projeto encontrado",
+            "sort": {
+                "recent": "Atualizado Recentemente",
+                "name": "Nome do Projeto"
+            },
+            "lastEdited": "├Ültima edi├º├úo h├í {time}"
+        },
+        "actions": {
+            "import": "Importar Projeto",
+            "close": "Fechar",
+            "about": "Sobre o Onlook",
+            "signOut": "Sair",
+            "editApp": "Editar App",
+            "projectSettings": "Configura├º├Áes do projeto",
+            "showInExplorer": "Mostrar no Explorador",
+            "renameProject": "Renomear Projeto",
+            "deleteProject": "Deletar Projeto",
+            "cloneProject": "Clonar Projeto",
+            "cancel": "Cancelar",
+            "delete": "Deletar",
+            "rename": "Renomear",
+            "clone": "Clonar",
+            "goToAllProjects": "Ver todos os Projetos",
+            "newProject": "Novo Projeto",
+            "blankProject": "Projeto em Branco",
+            "startFromScratch": "Come├ºar do zero",
+            "importProject": "Importar um projeto",
+            "subscriptions": "Assinaturas",
+            "settings": "Configura├º├Áes",
+            "downloadCode": "Baixar C├│digo",
+            "downloadingCode": "Preparando download...",
+            "downloadSuccess": "Download iniciado com sucesso",
+            "downloadError": "Falha ao preparar o download",
+            "recentProjects": "Projetos Recentes"
+        },
+        "dialogs": {
+            "delete": {
+                "title": "Tem certeza que deseja deletar este projeto?",
+                "description": "Esta a├º├úo n├úo pode ser desfeita. Isso ir├í deletar permanentemente seu projeto e remover todos os dados associados.",
+                "moveToTrash": "Tamb├®m mover a pasta para a lixeira"
+            },
+            "rename": {
+                "title": "Renomear Projeto",
+                "label": "Nome do Projeto",
+                "error": "O nome do projeto n├úo pode estar vazio"
+            },
+            "clone": {
+                "title": "Clonar Projeto",
+                "label": "Nome do Projeto",
+                "placeholder": "Digite o nome para o projeto clonado",
+                "error": "O nome do projeto n├úo pode estar vazio"
+            }
+        },
+        "prompt": {
+            "title": "Que tipo de site voc├¬ quer criar?",
+            "description": "Conte um pouco sobre seu projeto. Seja o mais detalhado poss├¡vel.",
+            "input": {
+                "placeholder": "Cole uma captura de tela de refer├¬ncia, escreva um romance, seja criativo...",
+                "imageUpload": "Enviar Imagem de Refer├¬ncia",
+                "fileReference": "Refer├¬ncia de Arquivo",
+                "submit": "Come├ºar a construir seu site"
+            },
+            "blankStart": "Come├ºar de uma p├ígina em branco"
+        }
+    },
+    "welcome": {
+        "title": "Bem-vindo ao Onlook",
+        "titleReturn": "Bem-vindo de volta ao Onlook",
+        "description": "Um editor de c├│digo visual de pr├│xima gera├º├úo que permite a designers e gerentes de produto criar experi├¬ncias web com IA.",
+        "alpha": "Alfa",
+        "login": {
+            "github": "Entrar com GitHub",
+            "google": "Entrar com Google",
+            "email": "Entrar com E-mail",
+            "emailPlaceholder": "E-mail",
+            "passwordPlaceholder": "Senha",
+            "signIn": "Entrar",
+            "signUp": "Cadastrar",
+            "or": "ou",
+            "lastUsed": "Voc├¬ usou este da ├║ltima vez",
+            "loginToEdit": "Entre para Editar",
+            "shareProjects": "Sem cart├úo de cr├®dito ÔÇó Crie um site em segundos"
+        },
+        "terms": {
+            "agreement": "Ao se cadastrar, voc├¬ concorda com nossa",
+            "privacy": "Pol├¡tica de Privacidade",
+            "and": "e",
+            "tos": "Termos de Servi├ºo"
+        },
+        "version": "Vers├úo {version}"
+    },
+    "pricing": {
+        "plans": {
+            "basic": {
+                "name": "B├ísico",
+                "price": "R$0/m├¬s",
+                "description": "Prototipe e experimente em c├│digo com facilidade.",
+                "features": [
+                    "Acesso ao editor visual de c├│digo",
+                    "Projetos ilimitados",
+                    "{dailyMessages} mensagens de chat IA por dia",
+                    "{monthlyMessages} mensagens IA por m├¬s",
+                    "Limitado a 1 captura de tela por chat"
+                ]
+            },
+            "pro": {
+                "name": "Pro",
+                "price": "$20/m├¬s",
+                "description": "Criatividade sem limites. Construa sites incr├¡veis com IA.",
+                "features": [
+                    "Acesso ao editor visual de c├│digo",
+                    "Projetos ilimitados",
+                    "Mensagens de chat IA ilimitadas por dia",
+                    "Chats mensais ilimitados",
+                    "Remover marca d'├ígua 'feito com Onlook'",
+                    "1 dom├¡nio personalizado gratuito hospedado no Onlook",
+                    "Suporte priorit├írio"
+                ]
+            },
+            "launch": {
+                "name": "Launch",
+                "price": "$50/m├¬s",
+                "description": "Perfeito para startups e equipes em crescimento",
+                "features": [
+                    "Mensagens di├írias ilimitadas",
+                    "Suporte priorit├írio",
+                    "Integra├º├Áes avan├ºadas",
+                    "Recursos de colabora├º├úo em equipe"
+                ]
+            },
+            "scale": {
+                "name": "Scale",
+                "price": "$100/m├¬s",
+                "description": "Recursos de n├¡vel empresarial para grandes equipes",
+                "features": [
+                    "Tudo do plano Launch",
+                    "Gerente de conta dedicado",
+                    "Integra├º├Áes personalizadas",
+                    "An├ílises avan├ºadas",
+                    "Suporte premium 24/7"
+                ]
+            }
+        },
+        "titles": {
+            "choosePlan": "Escolha seu plano",
+            "proMember": "Obrigado por ser um membro Pro!"
+        },
+        "buttons": {
+            "currentPlan": "Plano Atual",
+            "getPro": "Obter Pro",
+            "manageSubscription": "Gerenciar Assinatura"
+        },
+        "loading": {
+            "checkingPayment": "Verificando pagamento..."
+        },
+        "toasts": {
+            "checkingOut": {
+                "title": "Processando pagamento",
+                "description": "Voc├¬ ser├í redirecionado ao Stripe para concluir o pagamento."
+            },
+            "redirectingToStripe": {
+                "title": "Redirecionando para o Stripe",
+                "description": "Voc├¬ ser├í redirecionado ao Stripe para gerenciar sua assinatura."
+            },
+            "error": {
+                "title": "Erro",
+                "description": "N├úo foi poss├¡vel iniciar o processo de pagamento. Tente novamente."
+            }
+        },
+        "footer": {
+            "unusedMessages": "Mensagens de chat n├úo utilizadas ser├úo acumuladas para o pr├│ximo m├¬s."
+        }
+    },
+    "editor": {
+        "modes": {
+            "design": {
+                "name": "Design",
+                "description": "Edite e modifique o design do seu site",
+                "tooltip": "Mudar para o modo design"
+            },
+            "code": {
+                "name": "C├│digo",
+                "description": "Edite e modifique o c├│digo do seu site",
+                "tooltip": "Mudar para o modo c├│digo"
+            },
+            "preview": {
+                "name": "Pr├®via",
+                "description": "Visualize e teste a funcionalidade do seu site",
+                "tooltip": "Mudar para o modo Pr├®via"
+            }
+        },
+        "toolbar": {
+            "tools": {
+                "select": {
+                    "name": "Selecionar",
+                    "tooltip": "Selecionar e modificar elementos"
+                },
+                "pan": {
+                    "name": "Mover",
+                    "tooltip": "Mover pelo canvas"
+                },
+                "insertDiv": {
+                    "name": "Inserir Cont├¬iner",
+                    "tooltip": "Adicionar um novo elemento cont├¬iner"
+                },
+                "insertText": {
+                    "name": "Inserir Texto",
+                    "tooltip": "Adicionar um novo elemento de texto"
+                }
+            },
+            "versionHistory": "Hist├│rico de Vers├Áes"
+        },
+        "panels": {
+            "edit": {
+                "tabs": {
+                    "chat": {
+                        "name": "Chat",
+                        "emptyState": "Selecione um elemento para conversar com a IA",
+                        "emptyStateStart": "Inicie o projeto para conversar",
+                        "input": {
+                            "placeholder": "Digite sua mensagem...",
+                            "tooltip": "Converse com a IA sobre o elemento selecionado"
+                        },
+                        "mode": {
+                            "tooltip": "Alternar entre os modos Construir e Perguntar"
+                        },
+                        "controls": {
+                            "newChat": "Novo Chat",
+                            "history": "Hist├│rico de Chat"
+                        },
+                        "settings": {
+                            "showSuggestions": "Mostrar sugest├Áes",
+                            "showMiniChat": "Mostrar mini chat",
+                            "autoApplyCode": "Aplicar resultados automaticamente",
+                            "expandCodeBlocks": "Mostrar c├│digo durante a renderiza├º├úo"
+                        },
+                        "miniChat": {
+                            "button": "Conversar com IA"
+                        },
+                        "openInCode": {
+                            "button": "Abrir no C├│digo"
+                        }
+                    },
+                    "styles": {
+                        "name": "Estilos",
+                        "emptyState": "Selecione um elemento para editar suas propriedades de estilo",
+                        "groups": {
+                            "position": "Posi├º├úo & Dimens├Áes",
+                            "layout": "Flexbox & Layout",
+                            "style": "Estilos",
+                            "text": "Texto"
+                        },
+                        "tailwind": {
+                            "title": "Classes Tailwind",
+                            "placeholder": "Adicionar classes tailwind aqui",
+                            "componentClasses": {
+                                "title": "Classes do Componente Principal",
+                                "tooltip": "As altera├º├Áes se aplicam ao c├│digo do componente. Este ├® o padr├úo."
+                            },
+                            "instanceClasses": {
+                                "title": "Classes da Inst├óncia",
+                                "tooltip": "As altera├º├Áes se aplicam ao c├│digo da inst├óncia."
+                            }
+                        }
+                    }
+                }
+            },
+            "layers": {
+                "name": "Camadas",
+                "tabs": {
+                    "layers": "Camadas",
+                    "pages": "P├íginas",
+                    "components": "Elementos",
+                    "images": "Imagens",
+                    "windows": {
+                        "name": "Janelas",
+                        "emptyState": "Selecione uma janela para editar suas configura├º├Áes"
+                    },
+                    "brand": "Marca",
+                    "branches": "Ramifica├º├Áes",
+                    "apps": "Apps"
+                }
+            }
+        },
+        "settings": {
+            "preferences": {
+                "language": "Idioma",
+                "theme": "Tema",
+                "deleteWarning": "Aviso de Exclus├úo",
+                "analytics": "An├ílises",
+                "editor": {
+                    "ide": "Editor",
+                    "shouldWarnDelete": "Avisar ao deletar elementos",
+                    "enableAnalytics": "Habilitar an├ílises"
+                },
+                "shortcuts": "Atalhos"
+            }
+        },
+        "frame": {
+            "startDesigning": {
+                "prefix": "Pressione ",
+                "action": "Play",
+                "suffix": " para come├ºar a criar seu App"
+            },
+            "playButton": "Play",
+            "waitingForApp": "Aguardando o App iniciar..."
+        },
+        "runButton": {
+            "portInUse": "Porta em Uso",
+            "loading": "Carregando",
+            "play": "Play",
+            "retry": "Tentar novamente",
+            "stop": "Parar"
+        },
+        "zoom": {
+            "level": "N├¡vel de Zoom",
+            "in": "Ampliar",
+            "out": "Reduzir",
+            "fit": "Ajustar Zoom",
+            "reset": "Zoom 100%",
+            "double": "Zoom 200%"
+        }
+    },
+    "help": {
+        "menu": {
+            "reloadOnlook": "Recarregar Onlook",
+            "theme": {
+                "title": "Tema",
+                "light": "Claro",
+                "dark": "Escuro",
+                "system": "Sistema"
+            },
+            "language": "Idioma",
+            "openSettings": "Abrir Configura├º├Áes",
+            "contactUs": {
+                "title": "Fale Conosco",
+                "website": "Site",
+                "discord": "Discord",
+                "github": "GitHub",
+                "email": "E-mail"
+            },
+            "reportIssue": "Reportar Problema",
+            "shortcuts": "Atalhos"
+        }
+    }
+}

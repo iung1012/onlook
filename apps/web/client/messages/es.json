@@ -98,6 +98,12 @@
         "login": {
             "github": "Iniciar sesión con GitHub",
             "google": "Iniciar sesión con Google",
+            "email": "Iniciar sesión con E-mail",
+            "emailPlaceholder": "Correo electrónico",
+            "passwordPlaceholder": "Contraseña",
+            "signIn": "Iniciar sesión",
+            "signUp": "Registrarse",
+            "or": "o",
             "lastUsed": "Usó esto la última vez",
             "loginToEdit": "Iniciar sesión para Editar",
             "shareProjects": "Sin tarjeta de crédito • Crea un sitio en segundos"

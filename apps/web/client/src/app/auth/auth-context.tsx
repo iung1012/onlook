@@ -5,7 +5,7 @@ import { SignInMethod } from '@onlook/models/auth';
 import localforage from 'localforage';
 import type { ReactNode } from 'react';
 import { createContext, useContext, useEffect, useState } from 'react';
-import { devLogin, login } from '../login/actions';
+import { devLogin, emailLogin, login, signUp } from '../login/actions';
 
 const LAST_SIGN_IN_METHOD_KEY = 'lastSignInMethod';
 
@@ -16,6 +16,8 @@ interface AuthContextType {
     setIsAuthModalOpen: (open: boolean) => void;
     handleLogin: (method: SignInMethod.GITHUB | SignInMethod.GOOGLE, returnUrl: string | null) => Promise<void>;
     handleDevLogin: (returnUrl: string | null) => Promise<void>;
+    handleEmailLogin: (email: string, password: string, returnUrl: string | null) => Promise<void>;
+    handleSignUp: (email: string, password: string, returnUrl: string | null) => Promise<any>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -63,8 +65,39 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         }
     }
 
+    const handleEmailLogin = async (email: string, password: string, returnUrl: string | null) => {
+        try {
+            setSigningInMethod(SignInMethod.EMAIL);
+            if (returnUrl) {
+                await localforage.setItem(LocalForageKeys.RETURN_URL, returnUrl);
+            }
+            await localforage.setItem(LAST_SIGN_IN_METHOD_KEY, SignInMethod.EMAIL);
+            await emailLogin(email, password);
+        } catch (error) {
+            console.error('Error signing in with email:', error);
+            throw error;
+        } finally {
+            setSigningInMethod(null);
+        }
+    };
+
+    const handleSignUp = async (email: string, password: string, returnUrl: string | null) => {
+        try {
+            setSigningInMethod(SignInMethod.EMAIL);
+            if (returnUrl) {
+                await localforage.setItem(LocalForageKeys.RETURN_URL, returnUrl);
+            }
+            return await signUp(email, password);
+        } catch (error) {
+            console.error('Error signing up with email:', error);
+            throw error;
+        } finally {
+            setSigningInMethod(null);
+        }
+    };
+
     return (
-        <AuthContext.Provider value={{ signingInMethod, lastSignInMethod, handleLogin, handleDevLogin, isAuthModalOpen, setIsAuthModalOpen }}>
+        <AuthContext.Provider value={{ signingInMethod, lastSignInMethod, handleLogin, handleDevLogin, handleEmailLogin, handleSignUp, isAuthModalOpen, setIsAuthModalOpen }}>
             {children}
         </AuthContext.Provider>
     );

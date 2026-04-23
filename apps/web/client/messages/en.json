@@ -98,6 +98,12 @@
         "login": {
             "github": "Login with GitHub",
             "google": "Login with Google",
+            "email": "Login with Email",
+            "emailPlaceholder": "Email",
+            "passwordPlaceholder": "Password",
+            "signIn": "Sign In",
+            "signUp": "Sign Up",
+            "or": "or",
             "lastUsed": "You used this last time",
             "loginToEdit": "Login to Edit",
             "shareProjects": "No credit card required • Get a site in seconds"

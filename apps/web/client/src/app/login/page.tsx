@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { DevLoginButton, LoginButton } from '../_components/login-button';
+import { EmailLoginForm } from '../_components/email-login-form';
 
 export default function LoginPage() {
     const isDev = process.env.NODE_ENV === 'development';
@@ -34,21 +35,36 @@ export default function LoginPage() {
                             {t(transKeys.welcome.description)}
                         </p>
                     </div>
-                    <div className="space-y-2 md:space-y-0 md:space-x-2 flex flex-col md:flex-row">
-                        <LoginButton
-                            returnUrl={returnUrl}
-                            method={SignInMethod.GITHUB}
-                            icon={<Icons.GitHubLogo className="w-4 h-4 mr-2" />}
-                            translationKey="github"
-                            providerName="GitHub"
-                        />
-                        <LoginButton
-                            returnUrl={returnUrl}
-                            method={SignInMethod.GOOGLE}
-                            icon={<Icons.GoogleLogo viewBox="0 0 24 24" className="w-4 h-4 mr-2" />}
-                            translationKey="google"
-                            providerName="Google"
-                        />
+                    <div className="space-y-6">
+                        <EmailLoginForm returnUrl={returnUrl} />
+                        
+                        <div className="relative">
+                            <div className="absolute inset-0 flex items-center">
+                                <span className="w-full border-t border-border" />
+                            </div>
+                            <div className="relative flex justify-center text-xs uppercase">
+                                <span className="bg-background px-2 text-muted-foreground">
+                                    {t(transKeys.welcome.login.or)}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="space-y-2 md:space-y-0 md:space-x-2 flex flex-col md:flex-row">
+                            <LoginButton
+                                returnUrl={returnUrl}
+                                method={SignInMethod.GITHUB}
+                                icon={<Icons.GitHubLogo className="w-4 h-4 mr-2" />}
+                                translationKey="github"
+                                providerName="GitHub"
+                            />
+                            <LoginButton
+                                returnUrl={returnUrl}
+                                method={SignInMethod.GOOGLE}
+                                icon={<Icons.GoogleLogo viewBox="0 0 24 24" className="w-4 h-4 mr-2" />}
+                                translationKey="google"
+                                providerName="Google"
+                            />
+                        </div>
                     </div>
                     {isDev && <DevLoginButton returnUrl={returnUrl} />}
                     <p className="text-small text-foreground-onlook">

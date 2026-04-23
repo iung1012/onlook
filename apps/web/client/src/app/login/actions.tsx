@@ -60,3 +60,44 @@ export async function devLogin() {
     }
     redirect(Routes.AUTH_REDIRECT);
 }
+
+export async function emailLogin(email: string, password: string) {
+    const supabase = await createClient();
+    const { data: { session } } = await supabase.auth.getSession();
+
+    if (session) {
+        redirect(Routes.AUTH_REDIRECT);
+    }
+
+    const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+    });
+
+    if (error) {
+        console.error('Error signing in with email:', error);
+        throw new Error(error.message);
+    }
+    redirect(Routes.AUTH_REDIRECT);
+}
+
+export async function signUp(email: string, password: string) {
+    const supabase = await createClient();
+    const origin = (await headers()).get('origin') ?? env.NEXT_PUBLIC_SITE_URL;
+    const redirectTo = `${origin}${Routes.AUTH_CALLBACK}`;
+
+    const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+            emailRedirectTo: redirectTo,
+        },
+    });
+
+    if (error) {
+        console.error('Error signing up with email:', error);
+        throw new Error(error.message);
+    }
+
+    return data;
+}
